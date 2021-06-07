@@ -41,5 +41,7 @@ public class DataTypes{
         System.out.println("----------------- TERIMAKASIH ------------------");
 
         JOptionPane.showMessageDialog(null,"Hai," + namaDepan + npm);
+
+        npm = JOptionPane.showInputDialog("Ketikan NPM : ");
     }
 }
