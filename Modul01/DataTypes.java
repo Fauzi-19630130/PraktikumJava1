@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class DataTypes{
     public static void main(String[] args) {
         
@@ -21,5 +23,6 @@ public class DataTypes{
         System.out.println("- Tampan : " + tampan);
         System.out.println("----------------- TERIMAKASIH ------------------");
 
+        JOptionPane.showMessageDialog(null,"Hai," + namaDepan + npm);
     }
 }
