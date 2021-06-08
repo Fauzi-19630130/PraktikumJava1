@@ -21,6 +21,7 @@ public class MahasiswaBeraksi {
         System.out.println("Tanggal Lahir \t : " + simpleDateFormat.format(mahasiswa.tanggalLahir));
         System.out.println("-----------------------------------------------");
 
+        mahasiswa.tampilkanAtribut();
         mahasiswa.menyapa();
 
         Mahasiswa mahasiswa2 = new Mahasiswa();
