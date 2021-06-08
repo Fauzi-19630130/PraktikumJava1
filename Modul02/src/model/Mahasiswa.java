@@ -1,5 +1,6 @@
 package model;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -8,6 +9,17 @@ public class Mahasiswa {
     String npm;
     String nama;
     Date tanggalLahir;
+
+    public Mahasiswa() {
+        System.out.println("Opjek diciptakan");
+    }
+
+    public Mahasiswa(String npm, String nama, Date tanggalLahir){
+
+        this.npm = npm;
+        this.nama = nama;
+        this.tanggalLahir = tanggalLahir;
+    }
 
     void tampilkanAtribut(){
         String polaTanggal = "dd-MM-yyy";

@@ -36,6 +36,7 @@ public class MahasiswaBeraksi {
         System.out.println("Tanggal Lahir \t : " + simpleDateFormat.format(mahasiswa2.tanggalLahir));
         System.out.println("-----------------------------------------------");
 
-
+        Mahasiswa n = new Mahasiswa("19630130","Fauzi",new Date());
+        n.tampilkanAtribut();
     }
 }
