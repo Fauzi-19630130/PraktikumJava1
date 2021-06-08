@@ -8,5 +8,7 @@ public class Mahasiswa {
     String nama;
     Date tanggalLahir;
 
-
+    void menyapa(){
+        System.out.println("Hai nama Aku : " + this.nama);
+    }
 }
