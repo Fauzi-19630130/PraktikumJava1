@@ -22,7 +22,13 @@ public class MahasiswaBeraksi {
         }
 
         mahasiswa.tampilkanAtribut();
-        System.out.println(mahasiswa.hitungUsia());
+        System.out.println("Usia saya " + mahasiswa.hitungUsia() + " Tahun");
+        System.out.println("-----------------------------------------------");
+
+        Mahasiswa m = new Mahasiswa("19631111","Fauzan", new Date());
+        m.tampilkanAtribut();
+        System.out.println("-----------------------------------------------");
+
 
 
     }

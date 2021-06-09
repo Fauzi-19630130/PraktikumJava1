@@ -10,6 +10,16 @@ public class Mahasiswa {
     public String nama;
     Date tanggalLahir;
 
+    public Mahasiswa() {
+        System.out.println("Opjek diciptakan");
+    }
+
+    public Mahasiswa(String npm, String nama, Date tanggalLahir) {
+        this.npm = npm;
+        this.nama = nama;
+        this.tanggalLahir = tanggalLahir;
+    }
+
     void menyapa(){
         System.out.println("Hai, nama saya " + nama);
     }
@@ -29,7 +39,6 @@ public class Mahasiswa {
 
         this.menyapa();
 
-        System.out.println("-----------------------------------------------");
     }
     int hitungUsia(){
         Calendar tanggalLahir = Calendar.getInstance();
@@ -53,5 +62,7 @@ public class Mahasiswa {
             }
         }
         return selisihTahun;
+
     }
+
 }
