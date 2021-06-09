@@ -12,7 +12,7 @@ public class MahasiswaBeraksi {
 
 
         String polaTanggal = "dd-MM-yyyy";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("06-03-2000");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(polaTanggal);
         try {
             mahasiswa.tanggalLahir = simpleDateFormat.parse("06-03-2000");
         } catch (ParseException e) {
@@ -22,6 +22,7 @@ public class MahasiswaBeraksi {
         }
 
         mahasiswa.tampilkanAtribut();
+        System.out.println(mahasiswa.hitungUsia());
 
 
     }
