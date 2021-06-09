@@ -43,6 +43,9 @@ public class Main {
             System.out.println("-----------------------");
         }
 
+        Mahasiswa mahasiswa = new Mahasiswa();
+        mahasiswa.setNama("Fauzi");
+
     }
 
 }
