@@ -9,4 +9,12 @@ public class Mahasiswa {
     String npm;
     public String nama;
     Date tanggalLahir;
+
+    void menyapa(){
+        System.out.println("Hai, nama saya " + nama);
+    }
+
+    String getNama(){
+        return nama;
+    }
 }
