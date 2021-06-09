@@ -1,8 +1,9 @@
 package helper;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import model.Matakuliah;
+
+import java.sql.*;
+import java.util.ArrayList;
 
 public class MyConnection {
     private static String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
@@ -28,7 +29,41 @@ public class MyConnection {
     }
 
     public static void main(String[] args) {
+        Matakuliah matakuliah;
+        ArrayList<Matakuliah> matakuliahList = new ArrayList<>();
         MyConnection myConnection = new MyConnection();
-        myConnection.getConnection();
+        Connection con = myConnection.getConnection();
+
+        String selectQuery = "Select * FROM matakuliah ";
+        Statement statement;
+        ResultSet resultSet;
+
+        try{
+            statement = con.createStatement();
+            resultSet = statement.executeQuery(selectQuery);
+            while(resultSet.next()){
+                matakuliah= new Matakuliah(
+                        resultSet.getInt("id_matakuliah"),
+                        resultSet.getString("nama_matakuliah"),
+                        resultSet.getString("singkatan_matakuliah"),
+                        resultSet.getString("nama_dosen"),
+                        resultSet.getString("kontak_dosen"),
+                        resultSet.getBoolean("aktif")
+
+                );
+                matakuliahList.add(matakuliah);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        for (Matakuliah value : matakuliahList){
+            System.out.print(value.getIdMatakuliah());
+            System.out.print("\t");
+            System.out.print(value.getSingkatanMataKuliah());
+            System.out.print("\t");
+            System.out.print(value.getNamaDosen());
+            System.out.print("\t");
+        }
     }
 }
